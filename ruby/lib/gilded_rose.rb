@@ -10,6 +10,7 @@ class GildedRose
         if item.quality > 0
           if item.name != "Sulfuras, Hand of Ragnaros"
             item.quality = item.quality - 1
+            puts "line 1"
           end
         end
       else
@@ -19,11 +20,13 @@ class GildedRose
             if item.sell_in < 11
               if item.quality < 50
                 item.quality = item.quality + 1
+                puts "line 2"
               end
             end
             if item.sell_in < 6
               if item.quality < 50
                 item.quality = item.quality + 1
+                puts "line 3"
               end
             end
           end
@@ -38,14 +41,18 @@ class GildedRose
             if item.quality > 0
               if item.name != "Sulfuras, Hand of Ragnaros"
                 item.quality = item.quality - 1
+                puts "line 4"
+
               end
             end
           else
             item.quality = item.quality - item.quality
+            puts "line 5"
           end
         else
           if item.quality < 50
             item.quality = item.quality + 1
+            puts "line 6"
           end
         end
       end
